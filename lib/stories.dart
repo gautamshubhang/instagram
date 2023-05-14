@@ -1,34 +1,6 @@
 import 'package:flutter/material.dart';
 
-List ln = ['Your Story','Shubhang','nihal','nitant','shaurya','rohan','srijan','yaawar','kartik','uadayan'];
-List<Widget> slider(){
-  List<Widget> lt = [];
-  var a = ln.length;
-  var i = 0;
-  while (a>=1){
-    lt.add(story(name: ln[i]));
-    i = i + 1;
-    a = a - 1;
-  }
-  return lt;
-}
-
-class story_slider extends StatefulWidget {
-  const story_slider({Key? key}) : super(key: key);
-
-  @override
-  State<story_slider> createState() => _story_sliderState();
-}
-
-class _story_sliderState extends State<story_slider> {
-  @override
-  Widget build(BuildContext context) {
-    return ListView(
-      scrollDirection: Axis.horizontal,
-      children: slider(),
-    );
-  }
-}
+List ln = ['Your Story','Shubhang','nihal','nitant','shaurya','daddy','srijan','yaawar','kartik','uadayan'];
 
 class story extends StatefulWidget {
   final String name;
