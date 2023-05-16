@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+
 
 class post extends StatefulWidget {
   final String name;
@@ -9,6 +12,7 @@ class post extends StatefulWidget {
 }
 
 class _postState extends State<post> {
+  int t = 1;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -22,14 +26,77 @@ class _postState extends State<post> {
           height: 469.0,
           child: Image(image: AssetImage(r'assets/user.png'),),
         ),
-        Row(
-          children: [
-            IconButton(onPressed: (){},icon:ImageIcon(AssetImage(r'assets/heart.png'),size: 25.0,),color: Colors.black,),
-            IconButton(onPressed: (){},icon:ImageIcon(AssetImage(r'assets/chat.png'),size: 25.0,),color: Colors.black,),
-            IconButton(onPressed: (){},icon:ImageIcon(AssetImage(r'assets/Share.png'),size: 25.0,),color: Colors.black,),
-            Spacer(),
-            IconButton(onPressed: (){},icon:ImageIcon(AssetImage(r'assets/save.png'),size: 25.0,),color: Colors.black,),
-          ],
+        Padding(
+          padding: const EdgeInsets.only(left: 5.0),
+          child: Row(
+            children: [
+              GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      t = 1;
+                    });
+                  },
+                  child: SizedBox(
+                      height: 25,
+                      width: 25,
+                      child: SvgPicture.asset(
+                        'assets/heart.svg',
+                        colorFilter: ColorFilter.mode(
+                            t == 1 ? Colors.black : Colors.red,
+                            BlendMode.srcIn),
+                      )
+                  )),
+              GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      t = 1;
+                    });
+                  },
+                  child: SizedBox(
+                      height: 20,
+                      width: 20,
+                      child: SvgPicture.asset(
+                        'assets/chat.svg',
+                        colorFilter: ColorFilter.mode(
+                            t == 1 ? Colors.black : Colors.white,
+                            BlendMode.srcIn),
+                      )
+                  )),
+              GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      t = 1;
+                    });
+                  },
+                  child: SizedBox(
+                      height: 20,
+                      width: 20,
+                      child: SvgPicture.asset(
+                        'assets/share.svg',
+                        colorFilter: ColorFilter.mode(
+                            t == 1 ? Colors.black : Colors.white,
+                            BlendMode.srcIn),
+                      )
+                  )),
+              Spacer(),
+              GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      t = 1;
+                    });
+                  },
+                  child: SizedBox(
+                      height: 20,
+                      width: 20,
+                      child: SvgPicture.asset(
+                        'assets/save.svg',
+                        colorFilter: ColorFilter.mode(
+                            t == 1 ? Colors.black : Colors.white,
+                            BlendMode.srcIn),
+                      )
+                  )),
+            ],
+          ),
         ),
         Container(
           child: Padding(
