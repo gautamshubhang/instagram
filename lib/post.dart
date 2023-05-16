@@ -30,54 +30,63 @@ class _postState extends State<post> {
           padding: const EdgeInsets.only(left: 5.0),
           child: Row(
             children: [
-              GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      t = 1;
-                    });
-                  },
-                  child: SizedBox(
-                      height: 25,
-                      width: 25,
-                      child: SvgPicture.asset(
-                        'assets/heart.svg',
-                        colorFilter: ColorFilter.mode(
-                            t == 1 ? Colors.black : Colors.red,
-                            BlendMode.srcIn),
-                      )
-                  )),
-              GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      t = 1;
-                    });
-                  },
-                  child: SizedBox(
-                      height: 20,
-                      width: 20,
-                      child: SvgPicture.asset(
-                        'assets/chat.svg',
-                        colorFilter: ColorFilter.mode(
-                            t == 1 ? Colors.black : Colors.white,
-                            BlendMode.srcIn),
-                      )
-                  )),
-              GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      t = 1;
-                    });
-                  },
-                  child: SizedBox(
-                      height: 20,
-                      width: 20,
-                      child: SvgPicture.asset(
-                        'assets/share.svg',
-                        colorFilter: ColorFilter.mode(
-                            t == 1 ? Colors.black : Colors.white,
-                            BlendMode.srcIn),
-                      )
-                  )),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        t = 1;
+                      });
+                    },
+                    child: SizedBox(
+                        height: 25,
+                        width: 25,
+                        child: SvgPicture.asset(
+                          'assets/heart.svg',
+                          colorFilter: ColorFilter.mode(
+                              t == 1 ? Colors.black : Colors.red,
+                              BlendMode.srcIn),
+                        )
+                    )),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        t = 1;
+                      });
+                    },
+                    child: SizedBox(
+                        height: 25,
+                        width: 25,
+                        child: SvgPicture.asset(
+                          'assets/chat.svg',
+                          colorFilter: ColorFilter.mode(
+                              t == 1 ? Colors.black : Colors.white,
+                              BlendMode.srcIn),
+                        )
+                    )),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        t = 1;
+                      });
+                    },
+                    child: SizedBox(
+                        height: 25,
+                        width: 25,
+                        child: SvgPicture.asset(
+                          'assets/share.svg',
+                          colorFilter: ColorFilter.mode(
+                              t == 1 ? Colors.black : Colors.white,
+                              BlendMode.srcIn),
+                        )
+                    )),
+              ),
               Spacer(),
               GestureDetector(
                   onTap: () {
