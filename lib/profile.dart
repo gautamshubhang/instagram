@@ -159,6 +159,16 @@ class _profileState extends State<profile> {
                 )
               ],
             ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height,
+              child: GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3, crossAxisSpacing: 1, mainAxisSpacing: 1),
+                itemBuilder: (BuildContext context, int index) {
+                  return Image.asset('assets/Vector.png');
+                },
+              ),
+            )
           ],
         ),
       )
